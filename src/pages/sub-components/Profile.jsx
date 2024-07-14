@@ -21,7 +21,7 @@ const Profile = () => {
               <div className="grid gap-2 w-full sm:w-72">
                 <Label>Profile Image</Label>
                 <img
-                  src={user && user.data?.avatar && user.data.avatar?.url}
+                  src={user && user.data?.avatar && user?.data.avatar?.url}
                   alt="avatar"
                   className="w-full h-auto sm:w-72 sm:h-72 rounded-2xl"
                 />

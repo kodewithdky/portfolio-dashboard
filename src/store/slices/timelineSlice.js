@@ -81,9 +81,7 @@ export const getAllTimeline = () => async (dispatch) => {
       "http://localhost:7071/api/v1/timeline/get",
       { withCredentials: true }
     );
-    dispatch(
-      timelineSlice.actions.getAllTimelineSuccess(response.data)
-    );
+    dispatch(timelineSlice.actions.getAllTimelineSuccess(response.data));
     dispatch(timelineSlice.actions.clearAllErrors());
   } catch (error) {
     dispatch(

@@ -98,9 +98,7 @@ export const getAllProjects = () => async (dispatch) => {
       "http://localhost:7071/api/v1/project/get",
       { withCredentials: true }
     );
-    dispatch(
-      projectSlice.actions.getAllProjectsSuccess(response.data)
-    );
+    dispatch(projectSlice.actions.getAllProjectsSuccess(response.data));
     dispatch(projectSlice.actions.clearAllErrors());
   } catch (error) {
     dispatch(

@@ -126,10 +126,11 @@ export const login = (email, password) => async (dispatch) => {
       { email, password },
       { withCredentials: true, headers: { "Content-Type": "application/json" } }
     );
+    console.log("data:",data)
     dispatch(userSlice.actions.loginSuccess(data));
     dispatch(userSlice.actions.clearAllErrors());
   } catch (error) {
-    dispatch(userSlice.actions.loginFailed(error.response.data.message));
+    dispatch(userSlice.actions.loginFailed(error?.response?.data?.message));
   }
 };
 

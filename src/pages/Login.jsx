@@ -21,6 +21,7 @@ const Login = () => {
   const { loading, isAuthenticated, error, user } = useSelector(
     (state) => state.user
   );
+  
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const handleLogin = () => {
@@ -76,7 +77,7 @@ const Login = () => {
               required
             />
           </div>
-          {loading ? (
+          {loading? (
             <LoadingButton content={"Logging In"} />
           ) : (
             <Button type="submit" className="w-full" onClick={handleLogin}>
